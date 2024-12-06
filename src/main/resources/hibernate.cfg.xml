@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+      <!-- DB Configuration -->
+      <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+      <property name="connection.url">jdbc:mysql://localhost:3306/jfsdexam</property>
+      <property name="connection.user">root</property>
+      <property name="connection.password">root</property>
+      
+      <!-- Hibernate configuration -->
+      <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+      <property name="hbm2ddl.auto">update</property>
+      <property name="show_sql">true</property>
+      
+    <!--   <mapping class="com.klef.jfsd.HQL.Student"/>
+       <mapping class="com.klef.jfsd.HCQL.Student1"/>
+       -->
+       <mapping class="com.klef.jfsd.exam.Vehical"/>
+      <mapping class="com.klef.jfsd.exam.Truck"/>
+      <mapping class="com.klef.jfsd.exam.Car"/>
+      
+      <!-- <mapping class="com.klef.jfsd.Hiberante.CRUD"/> -->
+      
+<!--        <mapping class="GeneratorClassDemo.User"/> 
+ --><!--        <mapping class="com.klef.jfsd.Hiberante.Faculty"/> 
+ -->     
+   </session-factory>
+</hibernate-configuration>
